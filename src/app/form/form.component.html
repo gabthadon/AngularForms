@@ -1,0 +1,26 @@
+<div class="container mt-5">
+
+    <form>
+        <input type="text" name="firstname" placeholder="Enter Firt Name"
+         #firstname="ngModel" minlength="3" required class="form-control" ngModel> <br>
+
+<div class="alert alert-danger" *ngIf="firstname.touched && firstname.invalid">
+     Invalid Firstname </div>
+
+    <input type="text" name="lastname" placeholder="Enter Last Name" 
+    #lastname="ngModel" minlength="3" required class="form-control" ngModel> <br>
+  
+    <div class="alert alert-danger" *ngIf="lastname.touched && lastname.invalid">
+        Invalid lastname </div>
+
+    <input type="text" name="email" placeholder="Enter Email"
+    #email="ngModel" email minlength="3" required class="form-control" ngModel> <br>
+
+    <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
+        Invalid Email </div>
+
+
+    <button class="btn btn-primary">SUBMIT</button>
+
+    </form>
+</div>
